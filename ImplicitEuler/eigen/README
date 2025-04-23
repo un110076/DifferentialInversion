@@ -1,0 +1,7 @@
+This subdirectory must contain Eigen.
+
+-> https://eigen.tuxfamily.org
+
+.
+|_ Eigen/ ... contains all relevant Eigen headers including Dense
+

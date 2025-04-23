@@ -1,0 +1,18 @@
+Reference Implementation for
+
+U. Naumann: Differential Inversion of the Implicit Euler Method, 2025.
+
+To get started ...
+
+1. obtain the Eigen library from https://eigen.tuxfamily.org;
+2. install Eigen in ./eigen;
+3. obtain the dco/c++ library and a trial license key from https://nag.com/automatic-differentiation/;
+4. install dco/c++ in ./dco;
+5. store the license file nag_key.txt in ./dco;
+6. cd LotkaVolterra && make ... to build and run;
+7. cd generalizedLotkaVolterra && make ... to build and run;
+8. cd plots && gnuplot plot_runtime.gp ... to generate the plot in Fig. 1;
+9. cd plots && gnuplot plot_memory.gp ... to generate the plot in Fig. 2.
+
+Questions? -> naumann@stce.rwth-aachen.de
+

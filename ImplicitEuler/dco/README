@@ -1,0 +1,9 @@
+This subdirectory must contain dco/c++.
+
+-> https://nag.com/automatic-differentiation/
+
+.
+|_ include/ ... contains all dco/c++ headers including dco.hpp
+|_ lib/ ... contains libdco.a
+|_ nag_key.txt ... license file
+

@@ -1,0 +1,29 @@
+// naumann@stce.rwth-aachen.de
+
+#include "Eigen/Dense"
+#include <stack>
+#include <iostream>
+
+#include "F.h"
+#include "Euler.h"
+
+std::stack<MT<double>> tape;
+
+template<>
+VT<double> N(VT<double> x) {
+  VT<double> x_prev=x, r=F(x,x_prev);
+  do {
+    x=x+dFdx(x).lu().solve(-r);
+    r=F(x,x_prev);
+  } while (r.norm()>R_PREC);
+  tape.push(dFdx(x));
+  return x;
+}
+
+VT<double> DifferentialInverse(const VT<double> &x) {
+  VT<double> v=E(x);
+  while (!tape.empty()) { v=tape.top()*v; tape.pop(); }
+  return v;
+}
+
+#include "main.h"
