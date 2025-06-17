@@ -21,11 +21,11 @@ Alg3.1.exe : Alg3.1.cpp F.h Euler.h main.h
 	./Alg3.1.exe > Alg3.1.out
 
 Alg3.2.exe : Alg3.2.cpp F.h Euler.h main.h
-	$(CPPC) -I$(EIGEN_INC_DIR) -I$(DCO_INC_DIR) $(DCO_FLAGS) $(EIGEN_FLAGS) $(CPPC_FLAGS) -DDIM=$(DIM) -DN_STEPS=$(N_STEPS) -DR_PREC=$(R_PREC) $< -o $@ -L$(DCO_LIB_DIR) -l$(DCO_LIB)
+	$(CPPC) -I$(EIGEN_INC_DIR) $(EIGEN_FLAGS) $(CPPC_FLAGS) -DDIM=$(DIM) -DN_STEPS=$(N_STEPS) -DR_PREC=$(R_PREC) $< -o $@ 
 	./Alg3.2.exe > Alg3.2.out
 
 Alg3.3.exe : Alg3.3.cpp F.h Euler.h main.h
-	$(CPPC) -I$(EIGEN_INC_DIR) -I$(DCO_INC_DIR) $(DCO_FLAGS) $(EIGEN_FLAGS) $(CPPC_FLAGS) -DDIM=$(DIM) -DN_STEPS=$(N_STEPS) -DR_PREC=$(R_PREC) $< -o $@ -L$(DCO_LIB_DIR) -l$(DCO_LIB)
+	$(CPPC) -I$(EIGEN_INC_DIR) $(EIGEN_FLAGS) $(CPPC_FLAGS) -DDIM=$(DIM) -DN_STEPS=$(N_STEPS) -DR_PREC=$(R_PREC) $< -o $@ 
 	./Alg3.3.exe  > Alg3.3.out
 
 clean:

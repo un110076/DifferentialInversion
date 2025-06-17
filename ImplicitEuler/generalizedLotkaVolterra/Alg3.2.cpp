@@ -1,7 +1,6 @@
 // naumann@stce.rwth-aachen.de
 
 #include "Eigen/Dense"
-#include "dco.hpp"
 #include <iostream>
 
 #include "F.h"
